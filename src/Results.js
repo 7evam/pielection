@@ -3,7 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 import { PieChart } from 'react-minimal-pie-chart';
 
-export default function Election() {
+export default function Election({ voted }) {
 
     const [loading, setLoading] = useState(true)
     const [results, setResults] = useState(null)
@@ -43,6 +43,7 @@ export default function Election() {
             : (
                 <div>
                     <h1>Results</h1>
+                    {voted ? <p>You've already Voted</p> : null}
                     <div className="chart">
                         <PieChart
                             labelStyle={{
