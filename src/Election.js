@@ -32,6 +32,7 @@ export default function Election({ setElectionPage }) {
             }
             )
             localStorage.setItem('userId', userId)
+            localStorage.setItem('pie', pie)
             alert("Thank you for voting")
             setElectionPage(false)
         } catch (e) {

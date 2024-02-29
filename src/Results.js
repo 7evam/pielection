@@ -35,6 +35,13 @@ export default function Election({ voted }) {
         fetchResults()
     }, []);
 
+    const pieTable = {
+        keylime: "Key Lime",
+        bor: "Blood Orange Ricotta",
+        bg: "Bayou Goo",
+        mb3p: "Maple Bourbon Brown Butter Peach"
+    }
+
 
     return (
         loading ?
@@ -43,7 +50,7 @@ export default function Election({ voted }) {
             : (
                 <div>
                     <h1>Results</h1>
-                    {voted ? <p>You've already Voted</p> : null}
+                    {voted ? <p>You've already voted for {pieTable[localStorage.getItem("pie")]}</p> : null}
                     <div className="chart">
                         <PieChart
                             labelStyle={{
