@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  /* Optional spacing between rows */
+}
+
+.pie {
+  flex: 1;
+  margin-right: 10px;
+  /* Optional spacing between columns */
+  background-color: lightgray;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  background-position: center;
+}
+
+.pie:hover {
+  border: 4px solid orange;
+  cursor: pointer;
+}
+
+.pieName {
+  font-size: 42px;
+}
+
+.chart {
+  height: 500px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#keylime {
+  background-image: url("images/keylimeT.png");
+}
+
+#mb3p {
+  background-image: url("images/mb3pT.png");
+}
+
+#bor {
+  background-image: url("images/borT.png");
+}
+
+#bg {
+  background-image: url("images/bgT.png");
+}
