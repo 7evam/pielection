@@ -47,6 +47,7 @@ code {
   background-position: center;
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 
 button {
@@ -81,7 +82,8 @@ button[disabled] {
 }
 
 .pieName {
-  font-size: 42px;
+  font-size: 32px;
+  font-weight: 800;
 }
 
 .chart {

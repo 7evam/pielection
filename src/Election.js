@@ -42,7 +42,6 @@ export default function Election({ setElectionPage }) {
         <>
             <h1>Vote for the pie that seems more delicious. If you haven't had the pie before, that's okay!</h1>
             <div className="container">
-
                 <div className="row">
                     <Pie onClick={() => setSelected('keylime')} selected={selected} id='keylime' className="pie">
                         <p className='pieName'>Key Lime</p>
