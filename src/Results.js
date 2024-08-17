@@ -16,14 +16,12 @@ export default function Election({ voted }) {
         console.log('here is response')
         console.log(response.data.votes)
         const votingResults = {
-            bor: 0,
-            bg: 0,
+            mmud: 0,
+            sr: 0,
             mb3p: 0,
             keylime: 0
         }
         response.data.votes.forEach(vote => {
-            console.log('here is vote')
-            console.log(vote)
             votingResults[vote.vote]++
         })
         setResults(votingResults)
@@ -35,10 +33,16 @@ export default function Election({ voted }) {
         fetchResults()
     }, []);
 
+    // const pieTable = {
+    //     keylime: "Key Lime",
+    //     bor: "Blood Orange Ricotta",
+    //     bg: "Bayou Goo",
+    //     mb3p: "Maple Bourbon Brown Butter Peach"
+    // }
     const pieTable = {
         keylime: "Key Lime",
-        bor: "Blood Orange Ricotta",
-        bg: "Bayou Goo",
+        mmud: "Mississippi Mud",
+        sr: "Strawberry Rhubarb",
         mb3p: "Maple Bourbon Brown Butter Peach"
     }
 
@@ -60,15 +64,15 @@ export default function Election({ voted }) {
                             label={(props) => { return props.dataEntry.title; }}
                             data={[
                                 { title: 'Key Lime', value: results.keylime, color: '#E8F48C' },
-                                { title: 'Blood Orange Ricotta', value: results.bor, color: '#F6602D' },
-                                { title: 'Bayou Goo', value: results.bg, color: '#7B3F00' },
+                                { title: 'Strawberry Rhubarb', value: results.sr, color: '#FB2943' },
+                                { title: 'Mississippi Mud', value: results.mmud, color: '#7B3F00' },
                                 { title: 'MB3P', value: results.mb3p, color: '#F68C35' },
                             ]}
                         />
                         <div>
                             <p><b>Key Lime</b>: {results.keylime}</p>
-                            <p><b>Blood Orange Ricotta</b>: {results.bor}</p>
-                            <p><b>Bayou Goo</b>: {results.bg}</p>
+                            <p><b>Strawberry Rhubarb</b>: {results.sr}</p>
+                            <p><b>Mississippi Mud</b>: {results.mmud}</p>
                             <p><b>Maple Bourbon Brown Butter Peach</b>: {results.mb3p}</p>
                         </div>
                     </div>

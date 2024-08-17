@@ -14,8 +14,6 @@ export default function Election({ setElectionPage }) {
 
     const submitVote = async (pie) => {
         setSubmitting(true)
-        console.log("here is pie")
-        console.log(pie)
         if (!selected) {
             alert('Please make a selection')
             return
@@ -51,7 +49,7 @@ export default function Election({ setElectionPage }) {
                         <p className='description'>Key Lime is one of the 11 most recognized pies
                             in the world according to restaurantclicks.com.
                             Despite having the benefit of brand recognition,
-                            Key Lime never made it to the Final Four until 2022 but has now won the last two contests in a row thanks
+                            Key Lime never made it to the Final Four until 2022 but won two contests in 2022 and 2023 in a row thanks
                             to its perfectly balanced flavor profile of tart and creamy
                             composed of key lime juice, egg yolks, and sweetened condensed milk baked on a perfect bed of graham cracker crust.</p>
                     </Pie>
@@ -68,20 +66,23 @@ export default function Election({ setElectionPage }) {
                     </Pie>
                 </div>
                 <div className="row">
-                    <Pie onClick={() => setSelected('bor')} selected={selected} id='bor' className="pie">
-                        <p className='pieName'>Blood Orange Ricotta</p>
-                        <p className='description'>As one of the more intriguing combinations of
-                            flavor in the competition, Blood Orange Ricotta has drawn
-                            a lot of oohs and ahs from pie fans all over.
-                            Ricotta Pie is a traditional dish in Sicily that
-                            this pie kicks up a notch with blood oranges,
-                            which are sweeter and less acidic than typical oranges.
-                            Its creamy ricotta filling adds a smooth texture and
-                            subtle richness to deliciously fresh blood oranges.</p>
+                    <Pie onClick={() => setSelected('mmud')} selected={selected} id='mmud' className="pie">
+                        <p className='pieName'>Mississippi Mud</p>
+                        <p className='description'>Mississippi Mud hopes to show all the pies that
+                            chocolate hasn't fallen out of fashion.
+                            The pie can be made numerous different ways, but typically
+                            features a layer of chocolate pudding and chocolate
+                            cake and is often served with, you guessed it, chocolate ice cream.
+                        </p>
                     </Pie>
-                    <Pie onClick={() => setSelected('bg')} selected={selected} id='bg' className="pie">
-                        <p className='pieName'>Bayou Goo</p>
-                        <p className='description'>With a cheesecake base enhanced with a layer of pecans followed by a chocolate pudding layer and finished with a whipped topping, shredded chocolate and powdered sugar, Bayou Goo is coming in strong. As the only chocolatey pie here, Bayou Goo stands out with its revolutionary combination of cheesecake, chocolate pudding and pecans giving fans of all sorts of non-fruit pies a reason to vote with the #GooCrew</p>
+                    <Pie onClick={() => setSelected('sr')} selected={selected} id='sr' className="pie">
+                        <p className='pieName'>Strawberry Rhubarb</p>
+                        <p className='description'>
+                            Earning its status as a 2 time champion this year,
+                            Strawberry Rhubarb has proven its deliciousness time and time again. Thought of by many
+                            as the perfect dichotomy of sweet and tart,
+                            This pie has made many mouths happy, bursting with the perfect balance
+                            of sweet strawberries and tart rhubarb topped off with a beautiful lattice crust.</p>
                     </Pie>
                 </div>
             </div>
